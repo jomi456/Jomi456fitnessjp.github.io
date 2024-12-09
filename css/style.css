@@ -1,112 +1,157 @@
-/* General Styling for YoungJP Website */
-
-/* Reset some default styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
     color: #333;
+    background-color: #f8f9fa;
 }
 
 /* Header */
-header {
-    background-color: #333;
+#header {
+    background-color: #0d6efd;
     color: #fff;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#header .logo img {
+    width: 150px;
+}
+
+#navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#navigation ul li {
+    display: inline;
+}
+
+#navigation ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#navigation ul li a:hover {
+    color: #ffc107;
+}
+
+/* Welcoming Message */
+#welcoming-message {
+    margin-top: 100px;
     text-align: center;
-    padding: 20px 0;
+    background-color: #e9ecef;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
+#welcoming-message h1 {
     font-size: 2.5rem;
-    letter-spacing: 2px;
+    color: #0d6efd;
 }
 
-/* Sections */
-section {
-    padding: 20px;
-    margin: 10px auto;
-    width: 90%;
-    max-width: 1200px;
+#welcoming-message p {
+    font-size: 1.1rem;
+    color: #6c757d;
 }
 
 /* Footer */
-footer {
-    background-color: #333;
+#footer {
+    background-color: #212529;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    padding: 1rem 0;
+    margin-top: 2rem;
 }
 
-/* Links */
-a {
-    color: #333;
+#footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+#footer .connect a {
     text-decoration: none;
+    color: #ffc107;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #ff5722;
+#footer .connect a:hover {
+    color: #fff;
 }
 
-/* Lists */
-ul {
-    list-style-type: none;
+/* Buttons */
+a.email, a.signup, .more {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    margin: 1rem 0.5rem 0;
+    background-color: #ffc107;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
 }
 
-ul li {
-    padding: 5px 0;
+a.email:hover, a.signup:hover, .more:hover {
+    background-color: #0d6efd;
 }
 
-/* Images */
-img {
+/* Blog Section */
+#body .body {
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+#body .body h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+#body .body p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+#body .body img {
     max-width: 100%;
     height: auto;
-}
-
-/* Cards for Blog Post Previews */
-.blog-card {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    padding: 20px;
     border-radius: 8px;
+    margin-top: 1rem;
 }
 
-.blog-card h3 {
-    font-size: 1.5rem;
-    color: #333;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navigation ul {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.blog-card p {
-    font-size: 1rem;
-    color: #666;
-}
+    #welcoming-message h1 {
+        font-size: 2rem;
+    }
 
-/* Form Styling */
-input, textarea {
-    padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    background-color: #ff5722;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #e64a19;
+    #footer .connect a {
+        display: block;
+        margin: 5px 0;
+    }
 }
